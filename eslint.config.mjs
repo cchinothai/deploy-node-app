@@ -11,20 +11,22 @@ export default defineConfig([
       js,
     },
     extends: [
-      "js/recommended",
-      "plugin:react/recommended"
+      js.configs.recommended,
     ],
     languageOptions: {
       globals: globals.browser,
+      parserOptions: {
+        ecmaFeatures: { jsx: true },
+      },
     },
     settings: {
       react: {
-        version: "detect", // auto-detect your React version
+        version: "detect",
       },
     },
     rules: {
-      // Customize rules here
-      "react/prop-types": "off", // example common override if you don't use prop-types
+      "react/prop-types": "off",
+      ...reactPlugin.configs.recommended.rules,
     },
   },
 ]);
