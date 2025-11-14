@@ -12,7 +12,7 @@ Local Testing
 $docker pull cchinothai/deploy-web-app-backend:latest
 #docker pull cchinothai/deploy-web-app-frontend:latest
 
-# Run containers
+#Run containers
 $ docker run -d -p 4000:4000 --name backend-container cchinothai/deploy-web-app-backend:latest
 $ docker run -d -p 3000:80 --name frontend-container cchinothai/deploy-web-app-frontend:latest
 
